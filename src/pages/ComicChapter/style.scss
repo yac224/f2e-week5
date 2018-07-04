@@ -1,3 +1,51 @@
-.comicChapter{
-  
+@import '../../assets/style/utils';
+.comicChapter {
+  > div {
+    max-width: 960px;
+    margin: rhythm(1) auto;
+  }
+  > .view {
+    width: 100％;
+    height: calc(80vh - #{rhythm(10)});
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0px;
+    > .imageArea {
+      width: 80%;
+    }
+    .arrowButton {
+      width: 10%;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .comicChapter {
+    > .view {
+      position: relative;
+      height: auto;
+      margin: 0;
+      > .imageArea {
+        display: block;
+        width: 100%;
+      }
+      > .arrowButton {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        width: 50%;
+        opacity: 0;
+        &.prev {
+          left: 0;
+        }
+        &.next {
+          right: 0;
+        }
+      }
+    }
+    > .chapterThumb {
+      display: none;
+    }
+  }
 }

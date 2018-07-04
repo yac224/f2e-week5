@@ -1,3 +1,17 @@
-<div class="comicChapter">
-  ComicChapter
+<div class="comicChapter"
+     v-if="pages && pages.length">
+  <div class="view">
+    <ArrowButton class="prev"
+                 :class="{lock:page==0}"
+                 @click.native="prevHandler()" />
+    <ImageArea :src="pages[page]" />
+    <ArrowButton class="next"
+                 :direction="1"
+                 :class="{lock:page==pages.length-1}"
+                 @click.native="nextHandler()" />
+  </div>
+  <ChapterThumb :page.sync="page"
+                :pages="pages"
+                :pchapter="pchapter"
+                :nchapter="nchapter" />
 </div>

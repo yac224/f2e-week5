@@ -1,10 +1,13 @@
-@import "../../assets/style/utils";
+@import '../../assets/style/utils';
 .arrowButton {
+  position: relative;
   display: inline-block;
   width: rhythm(6);
   height: rhythm(6);
-  &:before,&:after {
-    content: "";
+  vertical-align: middle;
+  &:before,
+  &:after {
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -14,6 +17,20 @@
     margin-top: -2px;
     margin-left: -10px;
     background-color: $primary;
+  }
+  &:hover {
+    background-color: $primary;
+    &:before,
+    &:after {
+      background-color: $dark;
+    }
+  }
+  &.lock {
+    cursor: default;
+    &:before,
+    &:after {
+      background-color: $dark;
+    }
   }
   &.up {
     &:before {
