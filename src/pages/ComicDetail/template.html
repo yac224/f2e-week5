@@ -1,3 +1,30 @@
 <div class="comicDetail">
-  ComicDetail
+  <div v-if="detail">
+    <div class="detail">
+      <div class="cover">
+        <img :src="detail.cover">
+      </div>
+      <div class="info">
+        <h2 class="title">{{ detail.title }}</h2>
+        <ul>
+          <li data-title="類型">{{detail.type}}</li>
+          <li data-title="作者">{{detail.author}}</li>
+          <li data-title="狀態">{{detail.status}}</li>
+          <li data-title="評分">
+            <ScoreStar :score="detail.score" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="description"
+         data-title="簡介">{{ detail.description }}</div>
+    <div class="chapter"
+         data-title="連載">
+      <ul>
+        <li v-for="item in detail.chapters">
+          <router-link :to="'/comics/'+detail.id+'/chapter/'+item.id">{{ item.text }}</router-link>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

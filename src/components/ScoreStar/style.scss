@@ -1,0 +1,14 @@
+.scoreStar {
+  display: inline-block;
+  width: 70px;
+  height: 14px;
+  vertical-align: middle;
+  background-image: url('/static/images/star.png');
+  background-repeat: no-repeat;
+}
+
+@for $i from 0 to 5 {
+  .star-#{$i} {
+    background-position: 0px -14px * (5 - $i);
+  }
+}
