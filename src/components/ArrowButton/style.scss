@@ -31,6 +31,9 @@
     &:after {
       background-color: $dark;
     }
+    &:hover {
+      background-color: transparent;
+    }
   }
   &.up {
     &:before {
