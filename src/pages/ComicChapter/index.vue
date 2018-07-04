@@ -53,7 +53,7 @@ export default {
     if (
       chapter % 100 < 1 ||
       chapter % 100 > 10 ||
-      chapter / 100 > 3 ||
+      chapter / 100 > 4 ||
       chapter / 100 < 1
     ) {
       this.$router.replace({
