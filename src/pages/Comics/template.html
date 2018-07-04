@@ -1,3 +1,8 @@
 <div class="comics">
-  Comics
+  <ComicItem v-for="{id,cover,title,description} in list"
+             :key="id"
+             :cover="cover"
+             :title="title"
+             :description="description"
+             @click.native="clickHandler(id)" />
 </div>
