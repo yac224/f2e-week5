@@ -6,9 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "start": "npm run api | npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "api": "json-server api/data.json --port 8888"
   },
   "dependencies": {
     "vue": "^2.5.2",
