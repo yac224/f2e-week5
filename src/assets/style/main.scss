@@ -1,0 +1,13 @@
+@import "normalize";
+@import "transition";
+@import "utils";
+html {
+  color: $light;
+  background: adjust-color($dark, $lightness: 10%);
+  font-family: "Roboto", sans-serif;
+}
+#app {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+}

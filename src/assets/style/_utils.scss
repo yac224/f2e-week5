@@ -1,0 +1,23 @@
+$primary: #f6a523;
+$dark: #222222;
+$light: #ffffff;
+$baseLine: 10px;
+
+@function rhythm($level) {
+  @return $baseLine * ceil($level);
+}
+
+@function line($size) {
+  @return rhythm($size * 1.2 / $baseLine);
+}
+
+@mixin font($size, $line-height: auto) {
+  $line: line($size);
+
+  font-size: $size;
+  @if $line-height == auto or $line-height < $line {
+    line-height: $line;
+  } @else {
+    line-height: $line-height;
+  }
+}
