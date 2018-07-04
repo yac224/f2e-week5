@@ -3,6 +3,11 @@ $dark: #222222;
 $light: #ffffff;
 $baseLine: 10px;
 
+%clearGutter {
+  margin: 0;
+  padding: 0;
+}
+
 @function rhythm($level) {
   @return $baseLine * ceil($level);
 }

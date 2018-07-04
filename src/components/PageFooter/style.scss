@@ -1,0 +1,18 @@
+@import "../../assets/style/utils";
+.pageFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: $dark;
+   > p {
+    @include font(12px);
+
+    margin: rhythm(1) 0;
+     > a {
+      text-decoration: none;
+      color: #f6a523;
+    }
+  }
+}

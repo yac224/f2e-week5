@@ -1,0 +1,50 @@
+@import "../../assets/style/utils";
+.arrowButton {
+  display: inline-block;
+  width: rhythm(6);
+  height: rhythm(6);
+  &:before,&:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: rhythm(2);
+    height: 4px;
+    margin-top: -2px;
+    margin-left: -10px;
+    background-color: $primary;
+  }
+  &.up {
+    &:before {
+      transform: rotate(45deg) translateX(4px) translateY(-4px);
+    }
+    &:after {
+      transform: rotate(-45deg) translateX(-4px) translateY(-4px);
+    }
+  }
+  &.right {
+    &:before {
+      transform: rotate(45deg) translateX(-4px) translateY(-4px);
+    }
+    &:after {
+      transform: rotate(-45deg) translateX(-4px) translateY(4px);
+    }
+  }
+  &.down {
+    &:before {
+      transform: rotate(45deg) translateX(-4px) translateY(4px);
+    }
+    &:after {
+      transform: rotate(-45deg) translateX(4px) translateY(4px);
+    }
+  }
+  &.left {
+    &:before {
+      transform: rotate(45deg) translateX(4px) translateY(4px);
+    }
+    &:after {
+      transform: rotate(-45deg) translateX(4px) translateY(-4px);
+    }
+  }
+}

@@ -1,12 +1,22 @@
 <template>
   <div id="app">
-    <router-view />
+    <PageHeader/>
+    <transition name="fade" mode="out-in" appear>
+      <router-view :style="{padding:'60px 0 40px 0'}" :key="$route.fullPath" />
+    </transition>
+    <PageFooter/>
   </div>
 </template>
 
 <script>
+import PageHeader from '@/components/PageHeader'
+import PageFooter from '@/components/PageFooter'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    PageHeader,
+    PageFooter
+  }
 }
 </script>
 

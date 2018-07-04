@@ -1,0 +1,7 @@
+<header class="pageHeader">
+  <ArrowButton v-if="$route.path!='/comics'"
+               @click.native="$router.go(-1)" />
+  <h1>
+    <router-link to='/comics'>AlexOtakuWhat</router-link>
+  </h1>
+</header>

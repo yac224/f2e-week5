@@ -1,0 +1,26 @@
+@import '../../assets/style/utils';
+.pageHeader {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: $dark;
+  > .arrowButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  > h1 {
+    @extend %clearGutter;
+    @include font(20px, 60px);
+    height: rhythm(6);
+    font-weight: 900;
+    font-style: italic;
+    > a {
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+}
