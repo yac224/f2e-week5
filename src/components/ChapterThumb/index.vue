@@ -28,14 +28,17 @@ export default {
     page() {
       if (!this.$el) return false
       let el = this.$el.querySelector('ul')
-      let index = this.pchapter ? this.page + 1 : this.page
-      let target = el.querySelectorAll('li')[index]
-      if (!target) return false
-      el.scrollLeft =
-        target.offsetLeft -
-        el.offsetLeft -
-        el.offsetWidth / 2 +
-        target.offsetWidth / 2
+      // let index = this.pchapter ? this.page + 1 : this.page
+      // let target = el.querySelectorAll('li')[index]
+      this.$nextTick(() => {
+        let target = el.querySelector('li.active')
+        if (!target) return false
+        el.scrollLeft =
+          target.offsetLeft -
+          el.offsetLeft -
+          el.offsetWidth / 2 +
+          target.offsetWidth / 2
+      })
     }
   }
 }
