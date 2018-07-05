@@ -1,6 +1,6 @@
 # f2e-week5
 
-> Alex 宅幹嘛 x 六角學院 前端修煉精神時光屋 Week5 - 漫畫閱讀器
+> Alex 宅幹嘛 x 六角學院 前端修煉精神時光屋 Week5 - 漫畫閱讀器
 >
 > https://www.youtube.com/watch?v=MTpocmnewcI
 
