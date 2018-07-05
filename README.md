@@ -1,15 +1,23 @@
 # f2e-week5
 
-> A Vue.js project
+> Alex 宅幹嘛 x 六角學院 前端修煉精神時光屋 Week5 - 漫畫閱讀器
+>
+> https://www.youtube.com/watch?v=MTpocmnewcI
 
 ## Build Setup
 
-``` bash
-# install dependencies
+```bash
+# 安裝相關套件
 npm install
 
-# serve with hot reload at localhost:8080
+# 執行網頁伺服器
 npm run dev
+
+# 執行API伺服器
+npm run api
+
+# 執行網頁伺服器 & API伺服器 ＊建議使用＊
+npm start
 
 # build for production with minification
 npm run build
